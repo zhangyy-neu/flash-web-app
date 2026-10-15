@@ -50,8 +50,8 @@ jobs:
             pip3 install --upgrade pip
             pip3 install -r requirements.txt || { echo "依赖安装失败"; exit 1; }
             
-            supervisorctl restart flask-web-app || { echo "应用重启失败"; exit 1; }
-            supervisorctl status flask-web-app
+            supervisorctl restart flash-web-app || { echo "应用重启失败"; exit 1; }
+            supervisorctl status flash-web-app
             echo "部署完成"
           EOF
         env:
